@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,5 +27,12 @@ public class StudentController {
                 .orElseThrow(() -> new IllegalStateException("Student " + studentID + " does not exists"));
     }
 
+  /*  //trying this api to get all of the students
+    @GetMapping(path = "/students")
+    public Student getStudents(ArrayList<Student> wStudents = new ArrayList()){
+        return STUDENTS.stream()
+                .);
+    }
+*/
 
 }
